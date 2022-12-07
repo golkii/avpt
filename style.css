@@ -1,15 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .block {
   margin-bottom: 80px;
 }
 
+.sub-block {
+  margin-bottom: 40px;
+}
+
+p {
+  line-height: 1.5rem;
+}
 
 
 
@@ -21,6 +28,13 @@ body {
   background-position: center;
   height: 100vh;
   color: white;
+}
+
+.usavp {
+  background: url(pictures/usavp_header.png);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
 .header-white {
@@ -69,10 +83,12 @@ body {
 .sections>p>a {
   text-decoration: none;
   color: #000;
+  transition: 0.25s;
 }
 
 .sections>p>a:hover {
   color: rgb(178, 178, 178);
+  transition: 0.25s;
 }
 
 .language {
@@ -83,37 +99,40 @@ body {
   height: 30px;
   border-radius: 9px;
   background-color: #ddd;
+  transition: 0.25s;
 }
 
 .language:hover {
   background-color: #555;
   color: #fff;
+  transition: 0.25s;
 }
 
 .about-container {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  height: calc(100% - 76px);
+  align-items: center;
 }
 
 .about {
   flex: 1;
   max-width: 1280px;
-  margin-top: 25vh;
   font-size: 20px;
-  line-height: 30px;
 }
 
 .about>p {
-  max-width: 550px;
+  line-height: 30px;
+}
+
+.index-about>p {
+  width: 550px;
 }
 
 .main-h {
   font-size: 48px;
   font-weight: 600;
 }
-
-
 
 .regular-h {
   font-size: 36px;
@@ -173,11 +192,26 @@ h3 {
 }
 
 .product {
-  background-color: #2f2f2f;
-  padding: 20px;
   color: white;
   font-weight: 600;
+  display: block;
+  text-decoration: none;
+  background-color: #000;
+  /* overflow: hidden; */
 }
+
+.product>div {
+  opacity: 1;
+  padding: 20px;
+  height: calc(100% - 40px);
+  transition: opacity 0.25s linear, transform 0.25s linear;
+}
+
+.product>div:hover {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
 
 .products-groups {
   display: grid;
@@ -189,18 +223,24 @@ h3 {
 }
 
 .group {
-  background-color: #2f2f2f;
+  background-color: #000;
+
+}
+
+.group-container {
   padding: 35px;
   color: white;
   font-weight: 400;
   position: relative;
+  height: calc(100% - 70px);
+  opacity: 0.7;
 }
 
 .product-h {
   font-size: 24px;
 }
 
-.group>button {
+.group-container>a>button {
   color: #fff;
   background-color: #005AA6;
   border: 1px solid #005AA6;
@@ -209,15 +249,56 @@ h3 {
   font-size: 16px;
   position: absolute;
   bottom: 35px;
+  transition: 0.25s;
 }
 
-.group>button:hover {
+.group>a>button:hover {
   background: 0;
   border: 1px solid white;
+  transition: 0.25s;
 }
 
+.link {
+  font-size: 20px;
+  text-decoration: underline;
+  color: #005AA6;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 2rem;
+}
+
+li {
+  padding-left: 2rem;
+  background-image: url(pictures/list-disk.svg);
+  background-position: 0px 5px;
+  background-size: 0.7rem 0.7rem;
+  background-repeat: no-repeat;
+  line-height: 1.5em;
+  margin-bottom: 10px;
+}
 
 /*   partners   */
+
+
+/* tables */
+
+table.characteristics {
+  width: 100%;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #000;
+  padding: 20px
+}
+
+th {
+  padding: 20px;
+  border: 1px solid #000;
+}
 
 
 
@@ -259,9 +340,11 @@ h3 {
 .menu-block>.second-menu-block>p>a {
   text-decoration: none;
   color: white;
+  transition: 0.25s;
 }
 
 .menu-block>.first-menu-block>p>a:hover,
 .menu-block>.second-menu-block>p>a:hover {
-  color: rgb(178, 178, 178);
+  color: rgb(141, 141, 141);
+  transition: 0.25s;
 }
